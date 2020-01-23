@@ -16,8 +16,8 @@ package raft
 
 import (
 	"fmt"
+	"github.com/atomix/atomix-consul-raft-node/pkg/atomix/raft/config"
 	"github.com/atomix/atomix-go-node/pkg/atomix/cluster"
-	"github.com/atomix/atomix-raft-node/pkg/atomix/raft/config"
 	"github.com/hashicorp/raft"
 	"time"
 )
@@ -35,6 +35,7 @@ func newRaft(cluster cluster.Cluster, protocol *config.ProtocolConfig, fsm *Stat
 		ElectionTimeout:    protocol.GetElectionTimeoutOrDefault(),
 		CommitTimeout:      protocol.GetElectionTimeoutOrDefault(),
 		MaxAppendEntries:   2,
+		TrailingLogs:       1000,
 		SnapshotInterval:   protocol.GetSnapshotIntervalOrDefault(),
 		SnapshotThreshold:  protocol.GetSnapshotThresholdOrDefault(),
 		LeaderLeaseTimeout: protocol.GetElectionTimeoutOrDefault(),

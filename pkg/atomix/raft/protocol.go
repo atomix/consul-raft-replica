@@ -15,9 +15,9 @@
 package raft
 
 import (
+	"github.com/atomix/atomix-consul-raft-node/pkg/atomix/raft/config"
 	"github.com/atomix/atomix-go-node/pkg/atomix/cluster"
 	"github.com/atomix/atomix-go-node/pkg/atomix/node"
-	"github.com/atomix/atomix-raft-node/pkg/atomix/raft/config"
 )
 
 // NewProtocol returns a new Raft Protocol instance
