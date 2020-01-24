@@ -52,6 +52,6 @@ message QueryResponse {
 }
 
 service RaftProtocol {
-    rpc Command(CommandRequest) returns (CommandResponse);
-    rpc Query(QueryRequest) returns (QueryResponse);
+    rpc Command (CommandRequest) returns (CommandResponse);
+    rpc Query (QueryRequest) returns (QueryResponse);
 }

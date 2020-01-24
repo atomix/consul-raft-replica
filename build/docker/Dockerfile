@@ -2,6 +2,6 @@ FROM alpine:3.9
 
 USER nobody
 
-ADD build/_output/atomix-consul-raft-node /usr/local/bin/atomix-consul-raft-node
+ADD build/_output/consul-raft-replica /usr/local/bin/consul-raft-replica
 
-ENTRYPOINT ["atomix-consul-raft-node"]
+ENTRYPOINT ["consul-raft-replica"]

@@ -17,7 +17,7 @@ package raft
 import (
 	"context"
 	"fmt"
-	streams "github.com/atomix/atomix-go-node/pkg/atomix/stream"
+	streams "github.com/atomix/go-framework/pkg/atomix/stream"
 	"github.com/gogo/protobuf/proto"
 	"github.com/hashicorp/raft"
 	"net"
